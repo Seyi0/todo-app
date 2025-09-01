@@ -1,0 +1,54 @@
+### GET/
+send request
+GET http://localhost:5000
+
+
+
+### POST
+
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "test@test.com",
+    "password": "123123123"
+}
+
+### POST
+POST  http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "test@test.com",
+    "password": "123123123"
+}
+
+### fetch all todo GET
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU2NzIxNTQ0LCJleHAiOjE3NTY4MDc5NDR9.pgBij7AnRExWOLW2PzxCf3dAGbYHuWAFKV9aqVASn24
+
+### Create a new todo
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU2NzIxNTQ0LCJleHAiOjE3NTY4MDc5NDR9.pgBij7AnRExWOLW2PzxCf3dAGbYHuWAFKV9aqVASn24
+Content-Type: application/json
+
+{
+    "title": "New Todo",
+    "description": "This is a new todo item"
+}
+
+### update a todo 
+PUT http://localhost:5000/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU2NzIxNTQ0LCJleHAiOjE3NTY4MDc5NDR9.pgBij7AnRExWOLW2PzxCf3dAGbYHuWAFKV9aqVASn24
+Content-Type: application/json
+
+{
+    "title": "Updated Todo",
+    "description": "This is an updated todo item",
+    "completed": true
+}
+
+
+### delete a todo
+DELETE http://localhost:5000/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU2NzIxNTQ0LCJleHAiOjE3NTY4MDc5NDR9.pgBij7AnRExWOLW2PzxCf3dAGbYHuWAFKV9aqVASn24
